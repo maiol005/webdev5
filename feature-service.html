@@ -52,18 +52,12 @@
         const esriStreets = L.esri.basemapLayer('Gray').addTo(map);
 
         // add hosted feature layer
-        const earthquakesLayer = L.esri.featureLayer({url: 'https://services.arcgis.com/8df8p0NlLFEShl0r/arcgis/rest/services/NaturalDisasters_Earthquakes/FeatureServer/0'}).addTo(map);
-
-        // set up popup for earthquakes layer
-        earthquakesLayer.bindPopup(function(evt) {
-            return L.Util.template(
-              '<table>'+
-                '<tr><td>LOCATION:</td><td>{LOCATION}</td></tr>'+
-                '<tr><td>YEAR:</td><td>{YEAR}</td></tr>'+
-                '<tr><td>MAGNITUDE:</td><td>{MAGNITUDE}</td></tr>'+
-              '</table>',
-              evt.feature.properties);
-        });
+        
+        const damsLayer = L.esri.featureLayer({url: 'https://services.arcgis.com/8df8p0NlLFEShl0r/arcgis/rest/services/webdev5/FeatureServer/0?token=W5bMePEpniVBxyz1zTjKJ79RA5w5hzsr0Mvb-BmG1vYty78XGxE65WUq4AKDJwsG9zeIAmWSBigSVrgehvoM6XThqyWK8Eev6mCMKEqfJrMFOl8sbKFhP8TgstfwIhAQe5OzuYeANgoDcqDrnCZmG1UwzbYVLTMKvYBitH2jgn0O39lN0lroGFR9JFvvUUk2t0PFdQmLhLwp2PX4OIYF5--CRH7Xn-3JSNWramapwDGD0DF1NvqwviFrgv8JDIER'}).addTo(map);
+        
+        
+       
+        
     </script>
 </body>
 </html>
